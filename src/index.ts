@@ -22,3 +22,10 @@ console.log(formatNama("zidan alfa permana"));
 console.log(formatTanggal(new Date('07-07-2008')));
 
 const statusPeserta: StatusPeserta = "aktif";
+
+const timestamp: Timestamp = new Date("07-07-2008").toLocaleString();
+const conf: AppConfig = {
+    AppName: "Zidan",
+    version: "0.0.1",
+    maxPeserta: 1
+}

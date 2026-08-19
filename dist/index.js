@@ -18,4 +18,10 @@ console.log(jurnal);
 console.log((0, utils_1.formatNama)("zidan alfa permana"));
 console.log((0, utils_1.formatTanggal)(new Date('07-07-2008')));
 const statusPeserta = "aktif";
+const timestamp = new Date("07-07-2008").toLocaleString();
+const conf = {
+    AppName: "Zidan",
+    version: "0.0.1",
+    maxPeserta: 1
+};
 //# sourceMappingURL=index.js.map
