@@ -1,6 +1,6 @@
-import { Peserta, JurnalHarian } from "./types";
-import {formatTanggal, formatNama} from "./utils";
-import type { StatusPeserta} from "./types";
+import { Peserta, JurnalHarian } from "@types";
+import {formatTanggal, formatNama} from "@utils";
+import type { StatusPeserta} from "@types";
 
 const peserta: Peserta = {
     id: 1,
@@ -29,3 +29,7 @@ const conf: AppConfig = {
     version: "0.0.1",
     maxPeserta: 1
 }
+
+console.log(statusPeserta)
+console.log(timestamp)
+console.log(conf)

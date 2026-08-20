@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const utils_1 = require("./utils");
+const _utils_1 = require("@utils");
 const peserta = {
     id: 1,
     nama: "Zidan",
@@ -15,8 +15,8 @@ const jurnal = {
 };
 console.log(peserta);
 console.log(jurnal);
-console.log((0, utils_1.formatNama)("zidan alfa permana"));
-console.log((0, utils_1.formatTanggal)(new Date('07-07-2008')));
+console.log((0, _utils_1.formatNama)("zidan alfa permana"));
+console.log((0, _utils_1.formatTanggal)(new Date('07-07-2008')));
 const statusPeserta = "aktif";
 const timestamp = new Date("07-07-2008").toLocaleString();
 const conf = {
@@ -24,4 +24,7 @@ const conf = {
     version: "0.0.1",
     maxPeserta: 1
 };
+console.log(statusPeserta);
+console.log(timestamp);
+console.log(conf);
 //# sourceMappingURL=index.js.map

@@ -5,16 +5,41 @@
     "rootDir": "./src",
     "outDir": "./dist",
 
+    /*
+    tsconfig.json:8:5 - error TS5102: Option 'baseUrl' has been removed. Please remove it from your configuration.
+    Use '"paths": {"*": ["./src/*"]}' instead.
+
+    "baseUrl": "./src",
+
+    option baseUrl sudah deprecated dan harus diganti dengan paths
+    */
+    "paths": {
+      /*
+      pengganti "baseUrl": "./src",
+      */
+      "*": ["./src/*"],
+      /*
+      salah jika versi ts terbaru: "@models/*": ["models/*"]
+      karena:
+        tsconfig.json:17:21 - error TS5090: Non-relative paths are not allowed. Did you forget a leading './'?
+      */
+      "@models/*": ["./src/models/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@types/*": ["./src/types/*"],
+      "@models": ["./src/models"],
+      "@utils": ["./src/utils"],
+      "@types": ["./src/types"]
+    },
+
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
+    "module": "commonjs",
     "target": "ES2020",
     "types": [
       "node"
     ],
     // For nodejs:
-    // "lib": ["esnext"],
+    "lib": ["ES2020"],
     // "types": ["node"],
     // and npm install -D @types/node
 
@@ -28,10 +53,10 @@
     "exactOptionalPropertyTypes": true,
 
     // Style Options
-    // "noImplicitReturns": true,
+    "noImplicitReturns": true,
     // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     // "noFallthroughCasesInSwitch": true,
     // "noPropertyAccessFromIndexSignature": true,
     "esModuleInterop": true,
@@ -44,5 +69,5 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
 }
